@@ -2,12 +2,11 @@ package wang.mh.feignconsumer.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import wang.mh.feignconsumer.Product;
+import wang.mh.commonservice.dto.Product;
 import wang.mh.feignconsumer.service.HelloService;
-import wang.mh.feignconsumer.service.ProductService;
+import wang.mh.feignconsumer.service.RefactorProductService;
 
 import java.util.Objects;
 
@@ -18,7 +17,7 @@ public class ConsumerController {
     @Autowired
     private HelloService helloService;
     @Autowired
-    private ProductService productService;
+    private RefactorProductService productService;
 
     @RequestMapping("/consume")
     public String consume(){

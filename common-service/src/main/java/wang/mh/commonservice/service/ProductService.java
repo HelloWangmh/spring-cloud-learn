@@ -1,12 +1,12 @@
-package wang.mh.feignconsumer.service;
+package wang.mh.commonservice.service;
 
-import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.*;
-import wang.mh.feignconsumer.Product;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import wang.mh.commonservice.dto.Product;
 
-@FeignClient("hello-service")
 public interface ProductService {
-
     @RequestMapping(value = "/product", method = RequestMethod.GET)
     Product query(@RequestParam("code") String code);
 
@@ -15,5 +15,4 @@ public interface ProductService {
 
     @RequestMapping(value = "/product", method = RequestMethod.POST)
     String add(@RequestBody Product product);
-
 }

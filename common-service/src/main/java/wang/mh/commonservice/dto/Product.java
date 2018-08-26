@@ -1,4 +1,4 @@
-package wang.mh.feignconsumer;
+package wang.mh.commonservice.dto;
 
 import lombok.*;
 
@@ -10,5 +10,6 @@ import lombok.*;
 public class Product {
 
     private String code;
+
     private String name;
 }
