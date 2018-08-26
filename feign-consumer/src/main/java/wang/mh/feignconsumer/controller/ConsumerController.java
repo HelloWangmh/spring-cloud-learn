@@ -21,6 +21,7 @@ public class ConsumerController {
 
     @RequestMapping("/consume")
     public String consume(){
+        log.info("consume is coming");
         return helloService.hello();
     }
 
